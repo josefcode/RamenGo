@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to RamenGo, a web application where users can customize their ramen orders by selecting different types of broths and proteins. This project is a simple test to demonstrate your skills in HTML, CSS, and JavaScript, as well as your ability to consume an API and manipulate data.
+Welcome to RamenGo, a web application where users can customize their ramen orders by selecting different types of broths and proteins. This project to demonstrate  skills in HTML, CSS, and JavaScript, as well the ability to consume an API and manipulate data.
 
 ## Objective
 
