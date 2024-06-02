@@ -1,0 +1,114 @@
+@import "variables";
+@import "button";
+
+.banner {
+  background-image: url("../images/pattern-vermelha.svg");
+  background-size: contain;
+  width: 100%;
+  height: 768px;
+
+  &__navbar {
+    padding-left: 40px;
+    padding-top: 40.33px;
+  }
+
+  &__logo {
+    width: 125px;
+    height: 16px;
+  }
+
+  &__textWrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: -90px;
+  }
+
+  &__japaneseText {
+    writing-mode: vertical-rl;
+    @include typography(fifth);
+    color: map-get($colors, yellow);
+    margin-left: -14px;
+  }
+
+  &__mainText {
+    @include typography(sixth);
+    line-height: 2;
+    color: map-get($colors, light);
+  }
+
+  &__description {
+    @include typography(secondary);
+    width: 201px;
+    height: 124px;
+    color: map-get($colors, light);
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__wrapper {
+    @extend %flex-center;
+  }
+
+  &__heroImage {
+    width: 673px;
+    height: 683px;
+    margin-left: -200px;
+  }
+
+  &__button {
+    @extend .button-base;
+  }
+
+  @include media-md {
+    height: 677px;
+    background-size: cover;
+    &__navbar {
+      display: flex;
+      justify-content: center;
+      padding-left: unset;
+      padding-top: 20px;
+    }
+    &__wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__textWrapper {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: unset;
+    }
+
+    &__japaneseText {
+      writing-mode: unset;
+    }
+
+    &__mainText {
+      font-size: map-get($font-sizes, 120);
+      line-height: unset;
+      margin-top: -30px;
+    }
+
+    &__description {
+      width: 300px;
+      height: 81px;
+      color: map-get($colors, light);
+      @include typography(secondary);
+      line-height: 20px;
+      margin-bottom: unset;
+      text-align: center;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__heroImage {
+      width: 265.06px;
+      height: 269px;
+      margin-left: unset;
+      margin-top: 24px;
+    }
+  }
+}

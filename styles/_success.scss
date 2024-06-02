@@ -1,0 +1,122 @@
+.success-page {
+  display: flex;
+  height: 100vh;
+  &__navbar {
+    padding-left: 40px;
+    padding-top: 40.33px;
+  }
+  &__logo {
+    fill: map-get($colors, blue);
+    width: 125px;
+    height: 16px;
+  }
+  &__header {
+    background-image: url("../images/pattern-azul.svg");
+    background-size: contain;
+    width: 50%;
+  }
+
+  &__image {
+    width: 354px;
+    height: 392px;
+  }
+
+  &__wrapper {
+    @extend %flex-center;
+    flex-direction: column;
+    padding-top: 158px;
+  }
+  &__title {
+    @include typography(third);
+    color: map-get($colors, white);
+  }
+
+  &__description {
+    @include typography(fourth);
+    color: map-get($colors, yellow);
+    text-align: center;
+  }
+
+  .description-width {
+    width: 400px;
+  }
+
+  .success-main {
+    @extend %flex-center;
+    flex-direction: column;
+    width: 50%;
+
+    &__boy {
+      width: 65.46px;
+      height: 71.31px;
+      margin-bottom: 19px;
+    }
+    &__japonesTitle {
+      @include typography(third);
+      color: map-get($colors, yellow);
+      margin-bottom: 15px;
+    }
+    &__information {
+      @include typography(fourth);
+      color: map-get($colors, orange);
+      margin-bottom: 4px;
+    }
+    &__motivation {
+      @include typography(secondary);
+      color: map-get($colors, dark);
+      margin-bottom: 32px;
+    }
+
+    &__button {
+      @extend .button-base;
+    }
+  }
+
+  @include media-md {
+    flex-direction: column;
+
+    &__navbar {
+      display: flex;
+      justify-content: center;
+      padding-left: unset;
+      padding-top: 20px;
+    }
+    &__header {
+      width: 100%;
+      background-size: cover;
+    }
+
+    &__wrapper {
+      padding-top: 71px;
+    }
+
+    &__description {
+      font-size: map-get($font-sizes, 24);
+      margin-bottom: 112px;
+      width: 270px;
+    }
+
+    .description-width {
+      width: 270px;
+    }
+    .success-main {
+      width: 100%;
+      margin-top: 71px;
+
+      &__information {
+        font-size: map-get($font-sizes, 24);
+        width: 325px;
+        text-align: center;
+      }
+
+      &__motivation {
+        width: 325px;
+        text-align: center;
+      }
+
+      &__button {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// Button styles using variables
+.button-base {
+  @include typography(primary-extra-bold);
+  width: 213px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  color: map-get($colors, white);
+  background-color: map-get($colors, blue);
+  line-height: auto;
+  letter-spacing: 1.78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  padding-inline: 10px;
+
+  &:disabled {
+    background-color: map-get($colors, disabled);
+    cursor: not-allowed;
+
+    svg {
+      fill: map-get($colors, white);
+    }
+  }
+}

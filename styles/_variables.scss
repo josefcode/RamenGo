@@ -1,0 +1,84 @@
+// Define global CSS variables
+
+// Color variables
+$colors: (
+  dark: #000000,
+  blue: #1820ef,
+  orange: #ff4e42,
+  yellow: #ffc024,
+  light: #fafaed,
+  disabled: #c5c5c5,
+  white: #ffffff,
+);
+
+// Font weight variables
+$font-weights: (
+  black: 900,
+  extra-bold: 800,
+  medium: 500,
+);
+
+// Font size variables
+$font-sizes: (
+  14: 14px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  32: 32px,
+  48: 48px,
+  120: 120px,
+  160: 160px,
+);
+
+// Typography map
+$typography: (
+  primary: (
+    font-size: map-get($font-sizes, 14),
+    font-weight: map-get($font-weights, medium),
+  ),
+  primary-extra-bold: (
+    font-size: map-get($font-sizes, 14),
+    font-weight: map-get($font-weights, extra-bold),
+  ),
+  secondary: (
+    font-size: map-get($font-sizes, 16),
+    font-weight: map-get($font-weights, medium),
+  ),
+  third: (
+    font-size: map-get($font-sizes, 20),
+    font-weight: map-get($font-weights, black),
+  ),
+  fourth: (
+    font-size: map-get($font-sizes, 32),
+    font-weight: map-get($font-weights, black),
+  ),
+  fifth: (
+    font-size: map-get($font-sizes, 48),
+    font-weight: map-get($font-weights, black),
+  ),
+  sixth: (
+    font-size: map-get($font-sizes, 160),
+    font-weight: map-get($font-weights, black),
+  ),
+);
+
+// Mixin to apply typography
+@mixin typography($style) {
+  @each $property, $value in map-get($typography, $style) {
+    #{$property}: $value;
+  }
+}
+
+// Flex centering placeholder
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Media query mixin
+@mixin media-md {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}

@@ -1,0 +1,9 @@
+// Import variables and button styles
+@import "reset";
+@import "header";
+@import "order";
+@import "success";
+
+body {
+  background-color: map-get($colors, light);
+}

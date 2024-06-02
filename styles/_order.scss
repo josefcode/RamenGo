@@ -1,0 +1,120 @@
+.order-main {
+  @extend %flex-center;
+  flex-direction: column;
+
+  .order-section {
+    width: 1087px;
+    padding-top: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    &__indicator {
+      display: none;
+    }
+
+    &__description {
+      margin-bottom: 47px;
+    }
+
+    &__cardList {
+      display: flex;
+      gap: 64px;
+    }
+
+    .order-card {
+      @extend %flex-center;
+      border-radius: 11px;
+      width: 320px;
+      height: 316px;
+      list-style: none;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+      flex-direction: column;
+      transition: background-color 0.3s;
+
+      &__image {
+        width: 104px;
+        height: 104px;
+      }
+
+      &__title {
+        text-transform: capitalize;
+        color: map-get($colors, blue);
+        @include typography(third);
+        margin-bottom: 10px;
+
+        &.active {
+          color: map-get($colors, white);
+        }
+      }
+
+      &__description {
+        width: 256px;
+        text-align: center;
+        color: map-get($colors, dark);
+        @include typography(primary);
+
+        &.active {
+          color: map-get($colors, white);
+        }
+      }
+
+      &__price {
+        @include typography(third);
+        color: map-get($colors, orange);
+        margin-top: 36px;
+
+        &.active {
+          color: map-get($colors, yellow);
+        }
+      }
+    }
+
+    .active {
+      background-color: map-get($colors, blue);
+    }
+
+    .order-button {
+      @extend .button-base;
+      margin: 80px 0;
+    }
+
+    @include media-md {
+      width: 100%;
+      padding-top: 50px;
+
+      &__indicator {
+        display: unset;
+      }
+
+      &__title {
+        width: 328px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      &__description {
+        width: 328px;
+        text-align: center;
+        font-size: map-get($font-sizes, 16);
+      }
+
+      &__cardList {
+        scrollbar-width: none;
+        overflow: auto;
+        gap: 16px;
+        width: 100%;
+        padding: 10px 40px;
+      }
+
+      .order-card {
+        min-width: 280px;
+
+        &__price {
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
